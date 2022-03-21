@@ -14,9 +14,15 @@ class APP:
     def __init__(self):
         
         px.init(128, 128, title="Pyxel")
+        px.load('my_resource.pyxres')
         px.colors.from_list(pico8_PAL)
         self.CurrentUpdate= TestUpdate
         self.CurrentDraw = TestDraw
+
+
+        #-------
+
+        #--------
         
         px.run(self.update,self.draw)
         
@@ -34,7 +40,7 @@ def TestUpdate():
 
 def TestDraw():
     px.cls(1)
-    gfx.Tline(5,8,20,10,1,1)
+    gfx.Tline(10,10,112,112,0,0,0.125,0,0,0)
     #px.line(10,8,25,10,3)
     
 
