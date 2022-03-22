@@ -2,8 +2,8 @@ import pyxel as px
 from math import *
 import random
 
-from sympy import integer_log
-colorTable = [2,4,9,10]
+colorTable = [2,4,9,10,7]
+
 class Particle:
     def __init__(self,x=0,y=0,lifeTime=50):
         self.Reset(x,y,lifeTime)  
@@ -25,7 +25,7 @@ class Particle:
                 self.lifeTime = 0
             self.x += random.randint(-2,2)
             self.y += random.randint(-2,2)
-            self.color = colorTable[floor(self.lifeTime/15)]
+            self.color = colorTable[floor(self.lifeTime/10)]
 
     def Draw(self,screenX:int=0,screenY:int=0):
         if self.visiable == True:
