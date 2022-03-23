@@ -28,10 +28,10 @@ class Particle:
 
     
 class ParticleGenerator:
-    def __init__(self,x:int,
+    def __init__(self,
+                x:int,
                 y:int,
                 particle=Particle,
-                particleResetParam=None,
                 newPerFrame:int=20,
                 maxNum:int=1000,
                 activate:bool=True,
